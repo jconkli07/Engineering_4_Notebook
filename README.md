@@ -17,9 +17,9 @@
 * [FEA Part 1-Beam Design](#FEA_Part_1-Beam_Design)
 * [FEA Part 2-Simscale Workflow](#FEA_Part_2-Simscale_Workflow)
 * [FEA Part 3-Iterative Design](#FEA_Part_3-Iterative_Design)
-* [4.1 Ring and Spinner](#4.1_Ring_and_Spinner)
-* [4.2 Key and Prop](#4.2_Key_and_Prop)
-* [4.3 Assembling the Launcher](#4.3_Assembling_the_Launcher)
+* [4.1 Ring and Spinner](#41_Ring_and_Spinner)
+* [4.2 Key and Prop](#42_Key_and_Prop)
+* [4.3 Assembling the Launcher](#43_Assembling_the_Launcher)
 * [Media Test](#Media_Test)
 
 ---
