@@ -1,4 +1,4 @@
-# Engineer*ing 4 Notebook
+# Engineering 4 Notebook
 
 ---
 
@@ -554,4 +554,4 @@ Your readme will have various images and gifs on it. Upload a test image and tes
 
 ---
 
-* [Back to Top](#Engineering_4_Notebook)
+* [Back to Top](#Engineering-4-Notebook)
