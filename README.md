@@ -1,4 +1,4 @@
-# Engineering 4 Notebook
+# Engineer*ing 4 Notebook
 
 ---
 
@@ -84,7 +84,7 @@ I didn't have a lot of trouble on this assignment either. I realized that you ha
 
 ---
 
-## Launch_Pad_3
+## Launch Pad 3
 
 ### Assignment Description
 We are adding on to the previous code. This time, you will use a button to initiate the countdown. You are still counting down to liftoff and the LEDs are blinking every second. 
@@ -141,7 +141,7 @@ This part was a little harder and I got help from Shrey. I was confused on pull 
 
 ---
 
-## Launch_Pad_4
+## Launch Pad 4
 
 ### Assignment Description
 We are still building on the code from the previous assignments. In this assignment you need to move a servo 180 degress when the green light turns on and the serial monitor prints "Liftoff!"
@@ -211,7 +211,7 @@ This part was very easy. All you had to do was add as variable for the servo. Th
 
 ---
 
-## Crash_Avoidance_1
+## Crash Avoidance 1
 
 ### Assignment Description
 Use an accelerometer to print the X, Y, and Z acceleration values. This should be in real time and countinuously print. 
@@ -231,7 +231,7 @@ A very important thing to get out of this assignment is the use of f-strings. Th
 
 ---
 
-## Crash_Avoidance_2
+## Crash Avoidance 2
 
 ### Assignment Description
 
@@ -251,7 +251,7 @@ This assignment was pretty simple. We added an if functions that said that if th
 
 ---
 
-## Crash_Avoidance_3
+## Crash Avoidance 3
 
 ### Assignment Description
 Wire an OLED screen that prints the angular velocity values. Keep the other parts of the assignment like the LiPo battery and the LED turning on when turned past 90 degrees in any direction.
@@ -270,7 +270,7 @@ One challenging part of this assignment was learning how to make a splash functi
 
 ---
 
-## Landing_Area_1
+## Landing Area 1
 
 ### Assignment Description
 Make code that will allow you to enter 3 coordinates of a triangle. Then it will return the area of the triangle to you.
@@ -289,7 +289,7 @@ There was a going to be a lot of code in this assignment if it weren't for Elias
 
 ---
 
-## Landing_Area_2
+## Landing Area 2
 
 ### Assignment Description
 Building on the last assignment, use an OLED screen to print everything. Also, you have to graph the triangle on the OLED screen.
@@ -308,7 +308,7 @@ This assignment was a lot simpler because of how I did the first assignment. I w
 
 ---
 
-## Morse_Code_1
+## Morse Code 1
 
 ### Assignment Description
 The objective of this assignment is to translate a few words into morse code. The code asks you for the word(s). You type it in, and the morse code is returned to you. There is a bigger amount of space in between letters and slashes in between different words.
@@ -366,7 +366,7 @@ print (final)
 
 ---
 
-## Morse_Code_2
+## Morse Code 2
 
 ### Assignment Description
 This assignment adds on to the previous, "Morse Code 1." In this assignment you have to wire an LED to blink accordingly with the morse code that is returned. There are short blinks for dots, long blinks for dashes, longer pauses in between letters, and even longer pauses in between words
@@ -441,7 +441,7 @@ It was a fun addition to the previous assignment.First we created a constant to 
 
 ---
 
-## FEA_Part 1-Beam_Design
+## FEA Part 1-Beam Design
 
 ### Assignment Description
 This assignment is a challenge to see what team can create a beam that can hold the most weight while staying within the constraints listed. The constraints are the following: the beam must be 180mm long, the beam cannot be more than 13g, and vertical angles must be >=45 degrees. The will fail if the beam breaks or the beam bends more than 35mm down.
@@ -457,7 +457,7 @@ For this beam, we made walls to try to reduce the amount of displacement going d
 
 ---
 
-## FEA_Part_2-Simscale_Workflow
+## FEA Part 2-Simscale Workflow
 
 ### Assignment Description
 This assignment is a challenge to see what team can create a beam that can hold the most weight while staying within the constraints listed. The constraints are the following: the beam must be 180mm long, the beam cannot be more than 13g, and vertical angles must be >=45 degrees. The will fail if the beam breaks or the beam bends more than 35mm down.
@@ -473,7 +473,7 @@ When we used the Simscale, we can see that there is a lot of stress at the base 
 
 ---
 
-## FEA_Part_3-Iterative_Design
+## FEA Part 3-Iterative Design
 
 ### Assignment Description
 This assignment is a challenge to see what team can create a beam that can hold the most weight while staying within the constraints listed. The constraints are the following: the beam must be 180mm long, the beam cannot be more than 13g, and vertical angles must be >=45 degrees. The will fail if the beam breaks or the beam bends more than 35mm down.
@@ -489,7 +489,7 @@ For the final beam design, we cut out triangular holes and used more fillets to 
 
 ---
 
-## 4.1_Ring_and_Spinner
+## 4.1 Ring and Spinner
 
 ### Assignment Description
 The purpose of this assignment is to refresh and relearn our skills in Onshape. The task is to create and design a ring and a spinner for a helicopter toy called a "Pull Copter." In this assignment, I was Student A and Shrey Panicker [@shrey45](https://github.com/shrey45) was Student B. I created the Ring, the Top, and the Key, while Shrey created the Spinner and the Prop.
@@ -506,7 +506,7 @@ This assignment was pretty simple and was helpful in relearning the skills that 
 
 ---
 
-## 4.2_Key_and_Prop
+## 4.2 Key and Prop
 
 ### Assignment Description
 The purpose of this assignment is to refresh and relearn our skills in Onshape. The task is to create and design a ring and a spinner for a helicopter toy called a "Pull Copter." In this assignment, I was Student A and Shrey Panicker [@shrey45](https://github.com/shrey45) was Student B. I created the Ring, the Top, and the Key, while Shrey created the Spinner and the Prop.
@@ -523,7 +523,7 @@ The purpose of this assignment is to refresh and relearn our skills in Onshape. 
 
 ---
 
-## 4.3_Assembling_the_Launcher
+## 4.3 Assembling the Launcher
 
 ### Assignment Description
 
@@ -540,11 +540,11 @@ The purpose of this assignment is to refresh and relearn our skills in Onshape. 
 
 ---
 
-## Media_Test
+## Media Test
 Your readme will have various images and gifs on it. Upload a test image and test gif to make sure you've got the process figured out. Pick whatever image and gif you want!
 
 ### Test Link
-[test.py](https://github.com/jconkli07/Engineering_4_Notebook/blob/c06f7788a58206abf1b949c0d3ae60a8d23c17ee/raspberry-pi/test.py)
+[test.py](https://github.com/jconkli07/Engineering4_Notebook/blob/c06f7788a58206abf1b949c0d3ae60a8d23c17ee/raspberry-pi/test.py)
 
 ### Test Image
 ![Lakers](https://github.com/jconkli07/Engineering_4_Notebook/blob/c06f7788a58206abf1b949c0d3ae60a8d23c17ee/images/lakers.png) 
