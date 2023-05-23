@@ -551,3 +551,7 @@ Your readme will have various images and gifs on it. Upload a test image and tes
 
 ### Test GIF
 ![Monkey Playing Guitar](https://github.com/jconkli07/Engineering_4_Notebook/blob/c06f7788a58206abf1b949c0d3ae60a8d23c17ee/images/monkeyGuitaring.gif)
+
+---
+
+* [Back to Top](#Engineering_4_Notebook)
