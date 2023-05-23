@@ -1,18 +1,18 @@
-# Engineering_4_Notebook
+# Engineering 4 Notebook
 
 ---
 
 ## Table of Contents
-* [Launch_Pad_1](#Launch_Pad_1)
-* [Launch_Pad_2](#Launch_Pad_2)
-* [Launch_Pad_3](#Launch_Pad_3)
-* [Launch_Pad_4](#Launch_Pad_4)
-* [Crash_Avoidance_1](#Crash_Avoidance_1)
-* [Crash_Avoidance_2](#Crash_Avoidance_2)
-* [Crash_Avoidance_3](#Crash_Avoidance_3)
-* [Landing_Area_1](#Landing_Area_1)
-* [Landing_Area_2](#Landing_Area_2)
-* [Morse_Code_1](#Morse_Code_1)
+* [Launch_Pad_1](#Launch-Pad-1)
+* [Launch_Pad_2](#Launch-Pad-2)
+* [Launch_Pad_3](#Launch-Pad-3)
+* [Launch_Pad_4](#Launch-Pad-4)
+* [Crash_Avoidance_1](#Crash-Avoidance-1)
+* [Crash_Avoidance_2](#Crash-Avoidance-2)
+* [Crash_Avoidance_3](#Crash-Avoidance-3)
+* [Landing_Area_1](#Landing-Area-1)
+* [Landing_Area_2](#Landing-Area-2)
+* [Morse_Code_1](#Morse_Code-1)
 * [Morse_Code_2](#Morse_Code_2)
 * [FEA Part 1-Beam Design](#FEA_Part_1-Beam_Design)
 * [FEA Part 2-Simscale Workflow](#FEA_Part_2-Simscale_Workflow)
@@ -24,7 +24,7 @@
 
 ---
 
-## Launch_Pad_1
+## Launch Pad 1
 
 ### Assignment Description
 Create code to count down from 10 to 0 on the serial mointor. At 0, print the "Liftoff!" Use a loop and each number should be one second apart.
@@ -46,7 +46,7 @@ I didn't have a lot of trouble with this assignment. It was a good starting assi
 
 ---
 
-## Launch_Pad_2
+## Launch Pad 2
 
 ### Assignment Description
 Adding on to the assignment before, make a red LED blink everytime it counts down one second. Then turn on a green LED when it says "Liftoff!"
