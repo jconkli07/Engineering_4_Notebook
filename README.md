@@ -33,8 +33,8 @@ Create code to count down from 10 to 0 on the serial mointor. At 0, print the "L
 https://user-images.githubusercontent.com/63983735/198157410-312b2911-d246-433e-bc82-131ca46b2963.mov
 
 ### Code
-<details>
-<summary>Countdown Code</summary>
+<details>  
+<summary>Countdown Code</summary>  
 Code  
 ``` 
 import time
