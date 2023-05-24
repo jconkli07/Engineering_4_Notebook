@@ -37,7 +37,9 @@ https://user-images.githubusercontent.com/63983735/198157410-312b2911-d246-433e-
 <summary>Countdown Code</summary>
 Code 
 ``` python
-    import time
+
+```
+import time
 
 #Loops 10 times, with x starting at 10 and decreasing by 1 each loop, ending the loop when x gets ot 0
 for x in range(10,0,-1):
