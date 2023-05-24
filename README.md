@@ -34,12 +34,9 @@ https://user-images.githubusercontent.com/63983735/198157410-312b2911-d246-433e-
 
 ### Code
 <details>
-<summary>Code Week 7</summary>
-
-
+<summary>Code</summary>
 
 ```python
-
 import time
 import board
 from analogio import AnalogIn
