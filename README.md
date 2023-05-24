@@ -36,7 +36,7 @@ https://user-images.githubusercontent.com/63983735/198157410-312b2911-d246-433e-
 <details>
 <summary>Code Week 7</summary>
 
-Joystick Control:
+
 
 ```python
 
