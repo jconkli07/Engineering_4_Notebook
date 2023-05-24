@@ -63,7 +63,7 @@ https://user-images.githubusercontent.com/63983735/198157540-1b7d27db-2d23-466f-
 ### Wiring
 ![Launch Pad](images/Launch_4_Wire.jpeg)
 
-### Code
+### Code  
 ``` python
 import time
 import board
