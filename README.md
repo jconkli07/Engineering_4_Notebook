@@ -33,20 +33,133 @@ Create code to count down from 10 to 0 on the serial mointor. At 0, print the "L
 https://user-images.githubusercontent.com/63983735/198157410-312b2911-d246-433e-bc82-131ca46b2963.mov
 
 ### Code
-<details>  
-<summary>Countdown Code</summary>  
-Code  
-``` 
+<details>
+<summary>Code Week 7</summary>
+
+Joystick Control:
+
+```python
+
 import time
+import board
+from analogio import AnalogIn
+import simpleio
 
-#Loops 10 times, with x starting at 10 and decreasing by 1 each loop, ending the loop when x gets ot 0
-for x in range(10,0,-1):
-    print(x)        #Prints the currect value of x, which will result in a countdown from 10 to 1
-    time.sleep(1)
+joy_x = AnalogIn(board.GP27)
+joy_y = AnalogIn(board.GP26)
 
-print("Liftoff!")
+#motor1pin = ()
+#motor2pin = ()
+#motor3pin = ()
+#motor4pin = ()
+hoverSpeed = 130;   # default PWM value
+speedChange = 90;     # PWM value to add or subtract
+ramp_delay = 40;      # loop delay time for motor ramp up in milliseconds
+a = 0.3;            # constant for converting analog voltages to PWM values
+b = 1.5;            # offset for converting voltages to PWM values
+
+while True: 
+    
+    LR = simpleio.map_range(joy_x.value, 0, 65520, 0, 5)
+    UD = simpleio.map_range(joy_y.value, 200, 65520, 0, 5)
+    
+    # make analog (or whatever) values into voltage values or map the values to how the ramge motors operate
+
+    motor1speed = hoverSpeed + speedChange*(a*UD-a*LR)
+    motor2speed = hoverSpeed + speedChange*(a*UD+a*LR-b)
+    motor3speed = hoverSpeed + speedChange*(-a*UD+a*LR)
+    motor4speed = hoverSpeed + speedChange*(-a*UD-a*LR+b)
+
+    # make code to send speeds to motors
+
+    print(f"Motor 1 = {motor1speed}")
+    time.sleep(0.2)
+    print(f"Motor 2 = {motor2speed}")
+    time.sleep(0.2)
+    print(f"Motor 3 = {motor3speed}")
+    time.sleep(0.2)
+    print(f"Motor 4 = {motor4speed}")
+    time.sleep(0.2)
 ```
+
+PID: 
+ 
+```python
+
+ # Code to stablize drone
+
+import time
+import board
+import adafruit_mpu6050
+import busio
+
+sda_pin = board.GP14
+scl_pin = board.GP15
+i2c = busio.I2C(scl_pin, sda_pin)
+
+mpu = adafruit_mpu6050.MPU6050(i2c)
+
+int motor1pin = ()
+int motor2pin = ()
+int motor3pin = ()
+int motor4pin = ()
+int defaultSpeed = 
+int motor1speed = defaultSpeed
+int motor2speet = defaultSpeed
+int motor3speed = defaultSpeed
+int motor4speed = defaultSpeed
+speedChange = 0
+const float Kp = () # proportional gain
+const float Ki = () # integral gain
+const float Kd = () # derivative gain
+float ingerror
+float lastError
+
+gain = () #how much the sensor changes (dy) with respect to dx (1 notch up) 
+
+
+daccx = (the flat x value)
+daacy = ()
+daacz = ()
+
+error = 0
+
+startTime = time.monotonic
+loopTime = 0
+
+while True:
+    elapsedTime = startTime - loopTime
+
+    # Get acceleration in g's
+    x = mpu.acceleration[0] / 9.8
+    y = mpu.acceleration[1] / 9.8
+    z = mpu.acceleration[2] / 9.8
+
+    roll = 57.2958*atan2(y,z);
+    pitch = 57.2958*atan2(-x,sqrt(y*y+z*z));
+
+# PID controller to find speedChange
+
+    joystick1 = () #read analog joystick value
+    targetPitch = map(joystick1, 0, 1023, -45, 45 )
+    elapsedTime =     #insert function to get time since last loop
+    error = (targetPitch - currentPitch)
+    ingerror = ingerror + error * elapsedTime
+    dxerror = (error - lastError)/elapsedTime
+    speedChange = Kp*error + Ki*ingerror + Kd*dxerror
+    error = lastError
+
+# Changes motor speeds using calculates speedChange variable
+    motor1speed = defaultSpeed + speedChange
+    motor2speet = motor1speed
+    motor3speed = defaultSpeed + speedChange
+    motor4speed = motor3speed
+    
+    loopTime = time.monotonic
+ 
+ ```
 </details>
+
 ### Reflection
 I didn't have a lot of trouble with this assignment. It was a good starting assignment for the new type of code. I was a little confused with the for loop, but I figured out that I needed to put the integer that you counted by at the end. 
 
