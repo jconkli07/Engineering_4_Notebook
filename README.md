@@ -35,12 +35,9 @@ https://user-images.githubusercontent.com/63983735/198157410-312b2911-d246-433e-
 ### Code
 <details>
 <summary>Countdown Code</summary>
-    Countdown
-        ```python
-
-        ```
+```python
+```
 </details>
-
 ### Reflection
 I didn't have a lot of trouble with this assignment. It was a good starting assignment for the new type of code. I was a little confused with the for loop, but I figured out that I needed to put the integer that you counted by at the end. 
 
