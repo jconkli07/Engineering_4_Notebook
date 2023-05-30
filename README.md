@@ -30,7 +30,7 @@
 The assignment was to use circuitpython to countdown from 10 to 1, and then liftoff, and print this to the serial monitor.
 
 ### Evidence 
-images/LP1vid.MOV
+https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/f6de8241-d3c5-497c-960f-7fe7e89154d2
 
 ### Code
 <details>
@@ -65,26 +65,31 @@ https://user-images.githubusercontent.com/63983735/198157540-1b7d27db-2d23-466f-
 ![Launch Pad](images/Launch_4_Wire.jpeg)
 
 ### Code  
-``` python
+<details>
+<summary>Code</summary>
+
+```python
 import time
 import board
 import digitalio
-led = digitalio.DigitalInOut(board.GP15)   #Set led and led2 to control both leds and make them do seperate things.
-led.direction = digitalio.Direction.OUTPUT   #red led
-led2 = digitalio.DigitalInOut(board.GP16)
-led2.direction = digitalio.Direction.OUTPUT   #green led
 
-#while True:
-for i in range(10,0,-1):
-    led.value = True
-    time.sleep(.5)
-    print(i)
-    led.value = False
-    time.sleep(.5)
+#Creates controller for the red and green LEDs
+red = digitalio.DigitalInOut(board.GP15)
+red.direction = digitalio.Direction.OUTPUT
+green = digitalio.DigitalInOut(board.GP16)
+green.direction = digitalio.Direction.OUTPUT
 
-print('LIFTOFF')
-led2.value = True
+for x in range(10,0,-1):        #Loops 10 times, with x going from 10 and ending at 1
+    print(x)
+    red.value=True
+    time.sleep(0.5)
+    red.value=False
+    time.sleep(0.5)     #Turns the red LED on and off every 0.5 seconds, and prints x each second
+
+print("Liftoff!")
+green.value=True    #Once it is time for liftoff prints liftoff and turns on the green LED
 ```
+</details>
 
 ### Reflection
 I didn't have a lot of trouble on this assignment either. I realized that you have to make two different LED variables to make one blink at a different time than the other. I used Led and Led2.
@@ -103,45 +108,38 @@ https://user-images.githubusercontent.com/63983735/198157735-de986317-83ba-4274-
 ![Launch Pad](images/Launch_4_Wire.jpeg)
 
 ### Code
-This is the spicy version from Shrey because my code didn't get pushed correctly
+<details>
+<summary>Code</summary>
 
-``` python
+```python
 import time
 import board
 import digitalio
-led = digitalio.DigitalInOut(board.GP15)
-led.direction = digitalio.Direction.OUTPUT
-led2 = digitalio.DigitalInOut(board.GP16)
-led2.direction = digitalio.Direction.OUTPUT
-button = digitalio.DigitalInOut(board.GP11)
+
+#Creates controller for the red and green LEDs
+red = digitalio.DigitalInOut(board.GP15)
+red.direction = digitalio.Direction.OUTPUT
+green = digitalio.DigitalInOut(board.GP16)
+green.direction = digitalio.Direction.OUTPUT
+
+button = digitalio.DigitalInOut(board.GP11) #Setup to read the button and get the pressed value
 button.direction = digitalio.Direction.INPUT
-button.pull = digitalio.Pull.UP      # Button is pulled up so when pressed will read as true
+button.pull = digitalio.Pull.UP
 
-print('ready')
+while not button.value: #Waits until button.value=True, which is when the button is pressed
+    time.sleep(0.1)
 
-abortcheck = 0
+for x in range(10,0,-1):        #Loops 10 times, with x going from 10 and ending at 1
+    print(x)
+    red.value=True
+    time.sleep(0.5)
+    red.value=False
+    time.sleep(0.5)     #Turns the red LED on and off every 0.5 seconds, and prints x each second
 
-while True:
-    if not button.value:       #if button is pressed, initiate this function
-        abortcheck = 1
-        for i in range(10,0,-1):
-            led.value = True
-            print(i)
-            time.sleep(.5)
-            led.value = False
-            if not button.value:
-                print("ABORT")
-                time.sleep(1)
-                abortcheck = 0
-                break
-            time.sleep(.5)
-        if abortcheck == 0:
-            led2.value = False
-        else:
-            led2.value = True
-            print("LIFTOFF")
+print("Liftoff!")
+green.value=True    #Once it is time for liftoff prints liftoff and turns on the green LED
 ```
-
+</details>
 
 ### Reflection
 This part was a little harder and I got help from Shrey. I was confused on pull and push code for the button. Once he explained it, it made a lot more sense. I needed "button.pull = digitalio.Pull.UP" instead of pull down. This makes sure that the code doesn't run before the button value is true. This is why we use a while true statement.
@@ -160,58 +158,44 @@ https://user-images.githubusercontent.com/63983735/198157804-bf16c9f3-f43b-47c4-
 ![Launch Pad](images/Launch_4_Wire.jpeg)
 
 ### Code
-``` python
+<details>
+<summary>Code</summary>
+
+```python
 import time
 import board
 import digitalio
 import pwmio
 from adafruit_motor import servo
-led = digitalio.DigitalInOut(board.GP15)
-led.direction = digitalio.Direction.OUTPUT
-led2 = digitalio.DigitalInOut(board.GP16)
-led2.direction = digitalio.Direction.OUTPUT
+
+#Sets up LEDS, the button, and the servo
+red = digitalio.DigitalInOut(board.GP15)
+red.direction = digitalio.Direction.OUTPUT
+green = digitalio.DigitalInOut(board.GP16)
+green.direction = digitalio.Direction.OUTPUT
 button = digitalio.DigitalInOut(board.GP11)
 button.direction = digitalio.Direction.INPUT
 button.pull = digitalio.Pull.UP
 pwm_servo = pwmio.PWMOut(board.GP6, duty_cycle=2 ** 15, frequency=50)
-servo1 = servo.Servo(pwm_servo, min_pulse=500, max_pulse=2500)
-l = 0
+launchTower = servo.Servo(pwm_servo, min_pulse=500, max_pulse=2500)
 
-servo1.angle=0     #tells angle that servo starts at
-print('ready')
+launchTower.angle=0     #Sets the servo angle to 0 to start
 
-abortcheck = 0
+while not button.value: #Waits until button.value=True, which is when the button is pressed
+    time.sleep(0.1)
 
-while True:
-    if not button.value:
-        abortcheck = 1
-        for i in range(10,0,-1):
-            led.value = True
-            print(i)
-            time.sleep(.5)
-            led.value = False
-            time.sleep(.5)
-            if i <= 3:         
-                led.value = True
-                #print(i)
-                led.value = False
-                servo1.angle = 60*(4-i)      #60 degree rotations for 3 times
-                time.sleep(0.05)
-            if not button.value:
-                    print("ABORT")
-                    time.sleep(1)
-                    abortcheck = 0
-                    break
+for x in range(10,0,-1):        #Loops 10 times, with x going from 10 and ending at 1
+    print(x)
+    red.value=True
+    time.sleep(0.5)
+    red.value=False
+    time.sleep(0.5)     #Turns the red LED on and off every 0.5 seconds, and prints x each second
 
-
-
-        if abortcheck == 0:
-            led2.value = False
-        else:
-            led2.value = True
-            print("LIFTOFF")
-
+launchTower.angle=180   #Turns the servo 180 degrees, from 0 to 180
+print("Liftoff!")
+green.value=True    #Once it is time for liftoff prints liftoff and turns on the green LED
 ```
+</details>
 
 ### Reflection
 This part was very easy. All you had to do was add as variable for the servo. Then you would make sure the code is running by printing "ready." You also needed to set the servo equal to 0 degress before you made it move by saying "servo1.angle=0." In the spicy version that Shrey did, he split up the movement of the servo into 3 sections of 60 degree rotations. 
