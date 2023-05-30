@@ -27,7 +27,7 @@
 ## Launch Pad 1
 
 ### Assignment Description
-Create code to count down from 10 to 0 on the serial mointor. At 0, print the "Liftoff!" Use a loop and each number should be one second apart.
+The assignment was to use circuitpython to countdown from 10 to 1, and then liftoff, and print this to the serial monitor.
 
 ### Evidence 
 https://user-images.githubusercontent.com/63983735/198157410-312b2911-d246-433e-bc82-131ca46b2963.mov
@@ -49,7 +49,7 @@ print("Liftoff!")
 </details>
 
 ### Reflection
-I didn't have a lot of trouble with this assignment. It was a good starting assignment for the new type of code. I was a little confused with the for loop, but I figured out that I needed to put the integer that you counted by at the end. 
+This assignment was pretty simple, but I did learn more about loops in python. THe first number is the start, the second the end, and the third is the step size. If left unspecified the step size is 1. Using the loop correctly allowed me to use the same variable for the loop and countdown, and simply print that variable on each run of the loop.
 
 ---
 
