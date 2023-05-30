@@ -30,7 +30,7 @@
 The assignment was to use circuitpython to countdown from 10 to 1, and then liftoff, and print this to the serial monitor.
 
 ### Evidence 
-https://github.com/jconkli07/Engineering_4_Notebook/blob/db5f95efa5b6bb832abcffd0723fc2ef0fd627a2/images/LP1vid.MOV
+images/LP1vid.MOV
 
 ### Code
 <details>
