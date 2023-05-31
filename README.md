@@ -88,6 +88,7 @@ for x in range(10,0,-1):        #Loops 10 times, with x going from 10 and ending
 
 print("Liftoff!")
 green.value=True    #Once it is time for liftoff prints liftoff and turns on the green LED
+time.sleep(5)
 ```
 </details>
 
@@ -102,7 +103,7 @@ I didn't have a lot of trouble on this assignment either. I realized that you ha
 We are adding on to the previous code. This time, you will use a button to initiate the countdown. You are still counting down to liftoff and the LEDs are blinking every second. 
 
 ### Evidence 
-https://user-images.githubusercontent.com/63983735/198157735-de986317-83ba-4274-8708-b61aab024f3e.mov
+https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/f1d3d652-6561-4b69-aca7-a8c1e4130f10
 
 ### Wiring
 ![Launch Pad](images/Launch_4_Wire.jpeg)
@@ -122,11 +123,11 @@ red.direction = digitalio.Direction.OUTPUT
 green = digitalio.DigitalInOut(board.GP16)
 green.direction = digitalio.Direction.OUTPUT
 
-button = digitalio.DigitalInOut(board.GP11) #Setup to read the button and get the pressed value
+button = digitalio.DigitalInOut(board.GP2) #Setup to read the button and get the pressed value
 button.direction = digitalio.Direction.INPUT
 button.pull = digitalio.Pull.UP
 
-while not button.value: #Waits until button.value=True, which is when the button is pressed
+while button.value: #Waits until button.value=True, which is when the button is pressed
     time.sleep(0.1)
 
 for x in range(10,0,-1):        #Loops 10 times, with x going from 10 and ending at 1
@@ -138,6 +139,7 @@ for x in range(10,0,-1):        #Loops 10 times, with x going from 10 and ending
 
 print("Liftoff!")
 green.value=True    #Once it is time for liftoff prints liftoff and turns on the green LED
+time.sleep(5)
 ```
 </details>
 
