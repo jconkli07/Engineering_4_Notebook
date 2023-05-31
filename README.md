@@ -59,7 +59,7 @@ This assignment was pretty simple, but I did learn more about loops in python. T
 Adding on to the assignment before, make a red LED blink everytime it counts down one second. Then turn on a green LED when it says "Liftoff!"
 
 ### Evidence 
-https://user-images.githubusercontent.com/63983735/198157540-1b7d27db-2d23-466f-af0f-48d28da1be51.mov
+https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/12ff5ce0-c142-476a-a4ab-dcb0ff94a204
 
 ### Wiring
 ![Launch Pad](images/Launch_4_Wire.jpeg)
