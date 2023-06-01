@@ -269,7 +269,7 @@ One challenging part of this assignment was learning how to make a splash functi
 Make code that will allow you to enter 3 coordinates of a triangle. Then it will return the area of the triangle to you.
 
 ### Evidence 
-https://user-images.githubusercontent.com/63983735/198158356-7bf65323-b295-4371-82c7-9e00e29244bc.mov
+https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/93487b0b-6cc4-4d1d-8d2b-382fe17188eb
 
 ### Code
 <details>
