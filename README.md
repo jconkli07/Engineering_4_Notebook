@@ -307,19 +307,17 @@ This assignment was a lot simpler because of how I did the first assignment. I w
 The objective of this assignment is to translate a few words into morse code. The code asks you for the word(s). You type it in, and the morse code is returned to you. There is a bigger amount of space in between letters and slashes in between different words.
 
 ### Evidence 
-https://user-images.githubusercontent.com/63983735/198158584-17e3a748-1128-4bfb-bd6e-e12d76896160.mov
-
-### Wiring
-No wiring
+https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/ed56a772-c17c-4c37-bfb6-cd805dee3de9
 
 ### Code
-``` python
+<details>
+<summary>Code</summary>
+```python
 import time
 import board
 import digitalio
-led = digitalio.DigitalInOut(board.GP13)
-led.direction = digitalio.Direction.OUTPUT
-MORSE_CODE = { 'A':'.-', 'B':'-...',      #morse code dictionary
+
+dictionary = {'A':'.-', 'B':'-...',     #Create morse code dictionary
     'C':'-.-.', 'D':'-..', 'E':'.',
     'F':'..-.', 'G':'--.', 'H':'....',
     'I':'..', 'J':'.---', 'K':'-.-',
@@ -334,25 +332,19 @@ MORSE_CODE = { 'A':'.-', 'B':'-...',      #morse code dictionary
     '0':'-----', ', ':'--..--', '.':'.-.-.-',
     '?':'..--..', '/':'-..-.', '-':'-....-',
     '(':'-.--.', ')':'-.--.-'}
-modifier = 0.25
-dot_time = 1*modifier
-dash_time = 3*modifier
-between_taps = 1*modifier
-between_letters = 3*modifier
-between_words = 7*modifier
-list=[]
-message = input("Enter message: ")
-message=message.upper()       #Capitalization for message
-final = ""
-for letter in message:
-    list.append(letter)
-    if letter == " ":
-        final = final + "/" + " "    #puts a slash and a space in between words
 
-    else:
-        final = final + MORSE_CODE[letter] + " "     #puts a spce in between letter in morse code
-print (final)
+userMessage = input("Enter message: ")      #Prompt for and store message
+if not userMessage=="-q":   #Run program if quit message isn't entered
+    userMessage=userMessage.upper() #translates message to upper case to allow it to be translated
+    translatedMessage = ""
+    for letter in userMessage:      #Cycles through each letter in the inputted message
+        if letter==" ":     #If the current letter is a space add a /
+            translatedMessage+="/"
+        else:
+            translatedMessage+=dictionary[letter]+" "   #If the current letter is a regular letter add its morse code translation
+    print(translatedMessage)    #Print out final combination of translations
 ```
+</details>
 
 ### Reflection
  We used libraries for the first time in this assignment. It wwas nice that all of the morse code language was already done for us and we would just pull it from that. One part that I struggled on was figuring out how to space out the words in with the spaces and slashes, but I firgured out I had to count a space as a character. I said that "if letter == " "", you put a slash and a space at the end of it. If there is no space, you add a space on the end of the morse code letter by saying "final = final + MORSE_CODE[letter] + ' '"
