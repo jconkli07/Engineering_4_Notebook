@@ -307,7 +307,7 @@ This assignment was a lot simpler because of how I did the first assignment. I w
 The objective of this assignment is to translate a few words into morse code. The code asks you for the word(s). You type it in, and the morse code is returned to you. There is a bigger amount of space in between letters and slashes in between different words.
 
 ### Evidence 
-https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/ed56a772-c17c-4c37-bfb6-cd805dee3de9
+https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/b0260fff-20e4-4c21-be5e-10e7212c36e7
 
 ### Code
 <details>
