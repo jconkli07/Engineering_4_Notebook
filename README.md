@@ -312,37 +312,9 @@ https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/ed56a772-c17
 ### Code
 <details>
 <summary>Code</summary>
+    
 ```python
-import time
-import board
-import digitalio
 
-dictionary = {'A':'.-', 'B':'-...',     #Create morse code dictionary
-    'C':'-.-.', 'D':'-..', 'E':'.',
-    'F':'..-.', 'G':'--.', 'H':'....',
-    'I':'..', 'J':'.---', 'K':'-.-',
-    'L':'.-..', 'M':'--', 'N':'-.',
-    'O':'---', 'P':'.--.', 'Q':'--.-',
-    'R':'.-.', 'S':'...', 'T':'-',
-    'U':'..-', 'V':'...-', 'W':'.--',
-    'X':'-..-', 'Y':'-.--', 'Z':'--..',
-    '1':'.----', '2':'..---', '3':'...--',
-    '4':'....-', '5':'.....', '6':'-....',
-    '7':'--...', '8':'---..', '9':'----.',
-    '0':'-----', ', ':'--..--', '.':'.-.-.-',
-    '?':'..--..', '/':'-..-.', '-':'-....-',
-    '(':'-.--.', ')':'-.--.-'}
-
-userMessage = input("Enter message: ")      #Prompt for and store message
-if not userMessage=="-q":   #Run program if quit message isn't entered
-    userMessage=userMessage.upper() #translates message to upper case to allow it to be translated
-    translatedMessage = ""
-    for letter in userMessage:      #Cycles through each letter in the inputted message
-        if letter==" ":     #If the current letter is a space add a /
-            translatedMessage+="/"
-        else:
-            translatedMessage+=dictionary[letter]+" "   #If the current letter is a regular letter add its morse code translation
-    print(translatedMessage)    #Print out final combination of translations
 ```
 </details>
 
