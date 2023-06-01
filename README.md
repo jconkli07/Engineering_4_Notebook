@@ -364,14 +364,15 @@ https://user-images.githubusercontent.com/63983735/198158753-2468a18c-96bf-4cf5-
 ![Landing 2 Wire](images/MC2.jpeg)
 
 ### Code
-``` python
+<details>
+<summary>Code</summary>
 
+```python
 import time
 import board
 import digitalio
-led = digitalio.DigitalInOut(board.GP13)
-led.direction = digitalio.Direction.OUTPUT
-MORSE_CODE = { 'A':'.-', 'B':'-...',
+
+dictionary = {'A':'.-', 'B':'-...',     #Create morse code dictionary
     'C':'-.-.', 'D':'-..', 'E':'.',
     'F':'..-.', 'G':'--.', 'H':'....',
     'I':'..', 'J':'.---', 'K':'-.-',
@@ -386,41 +387,37 @@ MORSE_CODE = { 'A':'.-', 'B':'-...',
     '0':'-----', ', ':'--..--', '.':'.-.-.-',
     '?':'..--..', '/':'-..-.', '-':'-....-',
     '(':'-.--.', ')':'-.--.-'}
-modifier = 0.25
-dot_time = 1*modifier
-dash_time = 3*modifier
-between_taps = 1*modifier
-between_letters = 3*modifier
-between_words = 7*modifier
-list=[]
-message = input("Enter message: ")
-message=message.upper()
-final = ""
-for letter in message:
-    list.append(letter)
-    if letter == " ":
-        final = final + "/" + " "
 
-    else:
-        final = final + MORSE_CODE[letter] + " " 
-print (final)
+led = digitalio.DigitalInOut(board.GP15)
+led.direction = digitalio.Direction.OUTPUT
 
-for character in final:
-    if character == ".":      #if character is a . turn led on for dot_time
-        led.value = True
-        time.sleep(dot_time)
-    if character == "-":      #if character is a - turn led on for dash_time
-        led.value = True
-        time.sleep(dash_time)
-    if character == "/":     #if character is a / turn off for between_words
-        led.value = True
-        time.sleep(between_words)
-    if character == "":       #if there is no character, turn led off for between_letters
-        led.value = True
-        time.sleep(between_letters)
-    led.value = False         
-    time.sleep(between_taps)
+userMessage = input("Enter message: ")      #Prompt for and store message
+if not userMessage=="-q":   #Run program if quit message isn't entered
+    userMessage=userMessage.upper() #translates message to upper case to allow it to be translated
+    translatedMessage = ""
+    for letter in userMessage:      #Cycles through each letter in the inputted message
+        if letter==" ":     #If the current letter is a space add a /
+            translatedMessage+="/"
+        else:
+            translatedMessage+=dictionary[letter]+" "   #If the current letter is a regular letter add its morse code translation
+    print(translatedMessage)    #Print out final combination of translations
+    for symbol in translatedMessage:    #Evaluates each symbol and makes LED blink appropiately
+        if symbol==".":
+            led.value=True
+            time.sleep(0.25)    #Turns on LED for 1/4 second if the current symbol is a .
+        elif symbol=="-":
+            led.value=True
+            time.sleep(0.75)    #Turns on LED for 3/4 second if the current symbol is a -
+        elif symbol==" ":
+            time.sleep(0.5)    #Turns off LED for 1/2 second if it is a space between letters (1/4 sec added from end to make 3/4 total wait)
+        elif symbol=="/":
+            time.sleep(1.5)    #Turns off LED for 3/2 seconds if it is a space between words (1/4 sec added from end to make 7/4 total wait)
+        led.value=False
+        time.sleep(0.25)
+        #Waits for 1/4 second, adds space between different dots/dashes for same letter
+        #This also applies to spaces between letters and words, but their wait time is decreased by 1/4 second so it is the same in the end
 ```
+</details>
 
 ### Reflection
 It was a fun addition to the previous assignment.First we created a constant to multiply by when figuring out how much time we want in between each tap, letter, and word. This constant was called "modifier." It was .25 second long and we muliplied it by 1 for a dot, 3 for a dash, 1 for between taps, 3 for between letter, and 7 for between words. Then we made a lot of if statements for each character that you would see to translate that to the LED. I showed my parents this assignment and they thought it was very useful in the real world.
