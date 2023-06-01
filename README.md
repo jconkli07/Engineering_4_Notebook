@@ -377,7 +377,7 @@ if not userMessage=="-q":   #Run program if quit message isn't entered
 ## Morse Code 2
 
 ### Assignment Description
-This assignment adds on to the previous, "Morse Code 1." In this assignment you have to wire an LED to blink accordingly with the morse code that is returned. There are short blinks for dots, long blinks for dashes, longer pauses in between letters, and even longer pauses in between words
+This adds on to the previous assignment by making an LED blink out the actual morse code in addition to writing it. I have to code the LED to blink for the specified number of time for each symbol.
 
 ### Evidence 
 https://user-images.githubusercontent.com/63983735/198158753-2468a18c-96bf-4cf5-ab43-da9e89b4351b.mov
@@ -442,7 +442,7 @@ if not userMessage=="-q":   #Run program if quit message isn't entered
 </details>
 
 ### Reflection
-It was a fun addition to the previous assignment.First we created a constant to multiply by when figuring out how much time we want in between each tap, letter, and word. This constant was called "modifier." It was .25 second long and we muliplied it by 1 for a dot, 3 for a dash, 1 for between taps, 3 for between letter, and 7 for between words. Then we made a lot of if statements for each character that you would see to translate that to the LED. I showed my parents this assignment and they thought it was very useful in the real world.
+This added a good bit of complexity over the earlier assignment as now I actually had to code in specific behaviors for each specific symbol. However, the coding methods were realtively simple and all stuff I have used before. The hardest part was figuring how to do the break between dots/dashes in the same letter effeciently, and I did this by adding a 1/4 second pause to all symbols, and reducing the wait times for the / and space by 1/4 each so they are not effected.
 
 ---
 
@@ -497,24 +497,24 @@ For the final beam design, we cut out triangular holes and used more fillets to 
 ## 4.1 Ring and Spinner
 
 ### Assignment Description
-The purpose of this assignment is to refresh and relearn our skills in Onshape. The task is to create and design a ring and a spinner for a helicopter toy called a "Pull Copter." In this assignment, I was Student A and Shrey Panicker [@shrey45](https://github.com/shrey45) was Student B. I created the Ring, the Top, and the Key, while Shrey created the Spinner and the Prop.
+This assignment was a refresher for onshape skills, using sketches, extrusions, relations, etc. to model a Ring and Spinner. I modeled the Ring, and used [Shrey's](https://github.com/shrey45) spinner to represent him being the Student B, with me being Student A.
 
 ### Part Link 
-[Link to the Ring and Spinner](https://cvilleschools.onshape.com/documents/8616b8a375e597ac84230d17/w/24a18f8c93de24401fba89ea/e/5fe78ceeb2398b3504d84b42?renderMode=0&uiState=640f2f1e61c40226d1bda0a9). 
+[Onshape Link](https://cvilleschools.onshape.com/documents/ba8472dcf4c5b8a5aa8cdf15/w/95fc89eb58180a50ec8e6108/e/1cb2083397180410db65082c?renderMode=0&uiState=6478ce94e5fcbd3ced9ffe7a)
 
 ### Part Image
 ![Hyperlink text](images/Ring.jpg) 
 ![Hyperlink text](images/Spinner.jpg) 
 
 ### Reflection
-This assignment was pretty simple and was helpful in relearning the skills that we need to design our Pi in the Sky projects in Onshape. For the ring, I used the sketch of the top and extruded it to make the base of the ring. I then sketched two circles and extruded them to create a ring shape. Then, I used 1.5mm fillets to make the base stronger and more connected. The last part was making a whole in the middle for the spinner.
+This assignment mostly used tools that I have used before, but it was a good refresher as it has been a while since I have used Onshape. This was good practice in creating and using variables, as I had not used them very much. They can be very effective at easily allowing the user to adjust many values at the same time and creates dimensions that are linked to each other. Also, extruding in two different planes and merging them into one object was good practice that took a few tries to get correct. A chamfer is like a fillet, but uses one, flat, diagonal plan to "round" the corner rather than a continuous curved plane.
 
 ---
 
 ## 4.2 Key and Prop
 
 ### Assignment Description
-The purpose of this assignment is to refresh and relearn our skills in Onshape. The task is to create and design a ring and a spinner for a helicopter toy called a "Pull Copter." In this assignment, I was Student A and Shrey Panicker [@shrey45](https://github.com/shrey45) was Student B. I created the Ring, the Top, and the Key, while Shrey created the Spinner and the Prop.
+This worked with more advanced Onshape skills and tools to make the Key and Prop. As Student A I made the key, and used [Shrey's](https://github.com/shrey45) model for the prop.
 
 ### Part Link 
 [Link to the Key and Prop](https://cvilleschools.onshape.com/documents/8616b8a375e597ac84230d17/w/24a18f8c93de24401fba89ea/e/5fe78ceeb2398b3504d84b42?renderMode=0&uiState=640f2f1e61c40226d1bda0a9).  
@@ -524,7 +524,7 @@ The purpose of this assignment is to refresh and relearn our skills in Onshape. 
 ![Hyperlink text](images/Prop.jpg)
 
 ### Reflection
-
+Like the last one, this assignment used mostly tools that I already have used before, but its good to have practice with those. Offset is used to pattern features like lines and circles, but make them bigger or smaller than the original. H is the shorct for horizontal, and v is vertical. The only problem I had on this is that I accidentally offset the key 0.8 mm and not the #print_gap distance of 0.4mm, but I eventually figured this out after checking the mass. This also works with creating a mate connector within a part rather than an assembly, which I havn't worked with much before, but it was pretty similar to doing it in an assembly so I was able to complete it relatively easily.
 
 ---
 
