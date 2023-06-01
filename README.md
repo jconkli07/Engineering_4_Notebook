@@ -56,7 +56,7 @@ This assignment was pretty simple, but I did learn more about loops in python. T
 ## Launch Pad 2
 
 ### Assignment Description
-Adding on to the assignment before, make a red LED blink everytime it counts down one second. Then turn on a green LED when it says "Liftoff!"
+Keep the same structure from the first part, but make a red LED blink each second of the countdown, and a green LED turn on when countdown is completed.
 
 ### Evidence 
 https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/12ff5ce0-c142-476a-a4ab-dcb0ff94a204
@@ -93,14 +93,14 @@ time.sleep(5)
 </details>
 
 ### Reflection
-I didn't have a lot of trouble on this assignment either. I realized that you have to make two different LED variables to make one blink at a different time than the other. I used Led and Led2.
+This assignment took more time than the first part as I had to work with physical components as well, with the 2 LEDS. This was useful in practicing how to wire LEDs quickly. I learned that the resistors go between the leds and ground, and the side of the resistor with the most lines goes towards the led. If led wiring isn't working you should try to flip the led, as it only works in one orientation.
 
 ---
 
 ## Launch Pad 3
 
 ### Assignment Description
-We are adding on to the previous code. This time, you will use a button to initiate the countdown. You are still counting down to liftoff and the LEDs are blinking every second. 
+This is the same as Launch Pad 2, but a button is used to begin the sequence rather than it automatically beginning when the code is loaded.
 
 ### Evidence 
 https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/f1d3d652-6561-4b69-aca7-a8c1e4130f10
@@ -144,14 +144,14 @@ time.sleep(5)
 </details>
 
 ### Reflection
-This part was a little harder and I got help from Shrey. I was confused on pull and push code for the button. Once he explained it, it made a lot more sense. I needed "button.pull = digitalio.Pull.UP" instead of pull down. This makes sure that the code doesn't run before the button value is true. This is why we use a while true statement.
+This assignment was easier for me than the previous assignment, as I already had figured out digitalio from the previous LEDs, and the button's wiring is easier than the LEDs. I used a while loop loop with a time.sleep in it to wait for a state change. Buttons should be set to pullp up, not down.
 
 ---
 
 ## Launch Pad 4
 
 ### Assignment Description
-We are still building on the code from the previous assignments. In this assignment you need to move a servo 180 degress when the green light turns on and the serial monitor prints "Liftoff!"
+Once again this builds off the previous assignment, using the same structure except at launch a servo is rotated 180 degrees to represent the launch tower swinging away.
 
 ### Evidence 
 https://user-images.githubusercontent.com/63983735/198157804-bf16c9f3-f43b-47c4-bb21-4fcf63d7ba15.mov
@@ -200,27 +200,26 @@ green.value=True    #Once it is time for liftoff prints liftoff and turns on the
 </details>
 
 ### Reflection
-This part was very easy. All you had to do was add as variable for the servo. Then you would make sure the code is running by printing "ready." You also needed to set the servo equal to 0 degress before you made it move by saying "servo1.angle=0." In the spicy version that Shrey did, he split up the movement of the servo into 3 sections of 60 degree rotations. 
+This was my first time using a motor this year, but the implementation turned out to be rather easy. It had a relatively similar structure to a button or LED, and it required very little code to operate. I just need to remember that setting the angle to 180 degrees, for example, doesn't necesarily mean it rotates 180 degrees, it has to be set to 0 first.
 
 ---
 
 ## Crash Avoidance 1
 
 ### Assignment Description
-Use an accelerometer to print the X, Y, and Z acceleration values. This should be in real time and countinuously print. 
+This requires me to wire an accelerometer and then print out the x, y, and z acceleration values in real-time to the serial monitor.
 
 ### Evidence 
-https://user-images.githubusercontent.com/63983735/198157965-b8bfef2b-3145-4d4d-8321-6f95b8f93800.mov
+https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/74679238-c108-4d94-8c1b-e2bf5b03563a
 
 ### Wiring
 ![Crash 3](images/Crash_3_Wire.jpeg)
 
 ### Code
 
-[This is my code](https://github.com/qragsda80/Engineering_4_Notebook/blob/main/raspberry-pi/CA1.py)
 
 ### Reflection
-A very important thing to get out of this assignment is the use of f-strings. They can shorten your code by a lot and are very useful. We also were introduced to an accelerometer which I have never used before. It returns acceleration values wich will be useful in our pi in the sky projects.
+This assignment wasn't too difficult for me as I have wired accelerometers before this year and generally already understood how to code them. The acceleration values are stored in a 3 value array, with the first being x, second y, and third z.
 
 ---
 
@@ -266,7 +265,7 @@ One challenging part of this assignment was learning how to make a splash functi
 ## Landing Area 1
 
 ### Assignment Description
-Make code that will allow you to enter 3 coordinates of a triangle. Then it will return the area of the triangle to you.
+The task is to make code that prompts a user for 3 coordinates, and if those coordinates are valid and make a triangle prints out the area of the triangle. If the values are not numerical or don't make a triangle it returns an error and prompts the user again until a valid input is entered.
 
 ### Evidence 
 https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/93487b0b-6cc4-4d1d-8d2b-382fe17188eb
@@ -301,7 +300,7 @@ while True:     #Prompts the user again if it was not sucessful the first time
 </details>
 
 ### Reflection
-There was a going to be a lot of code in this assignment if it weren't for Elias Zell. He told me he found a really easy way to compress the code which was really helpful especially in the second assignment when you add more code. Learning the float function was helpful to convert the characters to number that the computer would understand. 
+This assignment was relatively difficult as it used a few new things in the code. The first one is taking the two inputs seperated by commas, which I can do with the .split(",") command. I also used Quinn's formula for calculating the area. I have used try/except in java before but not in python, but it is very useful in this case. It will attempt to run a block of code, and if that fails it will run the section under except.
 
 ---
 
