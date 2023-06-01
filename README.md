@@ -271,11 +271,34 @@ Make code that will allow you to enter 3 coordinates of a triangle. Then it will
 ### Evidence 
 https://user-images.githubusercontent.com/63983735/198158356-7bf65323-b295-4371-82c7-9e00e29244bc.mov
 
-### Wiring
-No wiring
-
 ### Code
-[This is my code](https://github.com/qragsda80/Engineering_4_Notebook/blob/main/raspberry-pi/LA1.py)
+<details>
+<summary>Code</summary>
+
+```python
+import math
+
+def triangleArea(x1, y1, x2, y2, x3, y3):   #Takes 6 passed values, an x and y fro each of the 3 points
+  x1f = float(x1)
+  x2f = float(x2)
+  x3f = float(x3)
+  y1f = float(y1)
+  y2f = float(y2)  
+  y3f = float(y3)   #Converts passed values to floats
+  return abs((x1f*y2f+x2f*y3f+x3f*y1f-y1f*x2f-y2f*x3f-y3f*x1f)/2)   #Calculates and returns area from passed values
+
+while True:     #Prompts the user again if it was not sucessful the first time
+    try:    #If this is unsuccesful it will go the the except: error message
+        [x1, y1] = input("Enter coordinate 1: ").split(",")
+        [x2, y2] = input("Enter coordinate 2: ").split(",")
+        [x3, y3] = input("Enter coordinate 3: ").split(",") #Prompts for and stores values for each cooridnate
+        print(f"The area of a triangle with coordinates ({x1},{y1}), ({x2},{y2}), and ({x3},{y3}) is {triangleArea(x1, y1, x2, y2, x3, y3)}")
+        #Uses the returned area to print out the coordinates and area of the triangle
+    except:
+        print("Try again, please enter numerical coordinates that make a triangle:")
+        #Prints error message and retrys if the initial attempt is unsuccesful
+```
+</details>
 
 ### Reflection
 There was a going to be a lot of code in this assignment if it weren't for Elias Zell. He told me he found a really easy way to compress the code which was really helpful especially in the second assignment when you add more code. Learning the float function was helpful to convert the characters to number that the computer would understand. 
