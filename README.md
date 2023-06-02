@@ -62,7 +62,7 @@ Keep the same structure from the first part, but make a red LED blink each secon
 https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/12ff5ce0-c142-476a-a4ab-dcb0ff94a204
 
 ### Wiring
-![Launch Pad](images/Launch_4_Wire.jpeg)
+<img width="300" alt="LP2 Wiring" src="https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/edd0c81f-a445-438e-962f-b07b610222fe">
 
 ### Code  
 <details>
@@ -106,7 +106,7 @@ This is the same as Launch Pad 2, but a button is used to begin the sequence rat
 https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/f1d3d652-6561-4b69-aca7-a8c1e4130f10
 
 ### Wiring
-![Launch Pad](images/Launch_4_Wire.jpeg)
+<img width="300" alt="LP3 Wiring" src="https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/ecc73b36-7921-4a25-b73d-14f74d8bbf6a">
 
 ### Code
 <details>
@@ -157,7 +157,7 @@ Once again this builds off the previous assignment, using the same structure exc
 https://user-images.githubusercontent.com/63983735/198157804-bf16c9f3-f43b-47c4-bb21-4fcf63d7ba15.mov
 
 ### Wiring
-![Launch Pad](images/Launch_4_Wire.jpeg)
+<img width="300" alt="LP4 Wiring" src="https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/95efed5b-1c67-4311-9886-bcc253912c48">
 
 ### Code
 <details>
@@ -213,7 +213,7 @@ This requires me to wire an accelerometer and then print out the x, y, and z acc
 https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/74679238-c108-4d94-8c1b-e2bf5b03563a
 
 ### Wiring
-![Crash 3](images/Crash_3_Wire.jpeg)
+<img width="300" alt="CA1 Wiring" src="https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/ea8d6033-d2ba-4b53-a025-b839cc1de6ec">
 
 ### Code
 
@@ -383,7 +383,7 @@ This adds on to the previous assignment by making an LED blink out the actual mo
 https://user-images.githubusercontent.com/63983735/198158753-2468a18c-96bf-4cf5-ab43-da9e89b4351b.mov
 
 ### Wiring
-![Landing 2 Wire](images/MC2.jpeg)
+<img width="300" alt="MC2 Wiring" src="https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/ade091f4-c83d-463d-9a3f-033968a4676a">
 
 ### Code
 <details>
