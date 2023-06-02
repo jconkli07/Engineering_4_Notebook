@@ -522,8 +522,7 @@ This assignment was a refresher for onshape skills, using sketches, extrusions, 
 [Onshape Link](https://cvilleschools.onshape.com/documents/ba8472dcf4c5b8a5aa8cdf15/w/95fc89eb58180a50ec8e6108/e/1cb2083397180410db65082c?renderMode=0&uiState=6478ce94e5fcbd3ced9ffe7a)
 
 ### Part Image
-![Hyperlink text](images/Ring.jpg) 
-![Hyperlink text](images/Spinner.jpg) 
+<img width="300" alt="Ring Cad" src="https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/42c2ee6a-c0d0-4419-aa8a-13d1199bb16a">
 
 ### Reflection
 This assignment mostly used tools that I have used before, but it was a good refresher as it has been a while since I have used Onshape. This was good practice in creating and using variables, as I had not used them very much. They can be very effective at easily allowing the user to adjust many values at the same time and creates dimensions that are linked to each other. Also, extruding in two different planes and merging them into one object was good practice that took a few tries to get correct. A chamfer is like a fillet, but uses one, flat, diagonal plan to "round" the corner rather than a continuous curved plane.
@@ -536,11 +535,10 @@ This assignment mostly used tools that I have used before, but it was a good ref
 This worked with more advanced Onshape skills and tools to make the Key and Prop. As Student A I made the key, and used [Shrey's](https://github.com/shrey45) model for the prop.
 
 ### Part Link 
-[Link to the Key and Prop](https://cvilleschools.onshape.com/documents/8616b8a375e597ac84230d17/w/24a18f8c93de24401fba89ea/e/5fe78ceeb2398b3504d84b42?renderMode=0&uiState=640f2f1e61c40226d1bda0a9).  
+[Onshape Link](https://cvilleschools.onshape.com/documents/ba8472dcf4c5b8a5aa8cdf15/w/95fc89eb58180a50ec8e6108/e/1cb2083397180410db65082c?renderMode=0&uiState=6478ce94e5fcbd3ced9ffe7a)
 
 ### Part Image
-![Hyperlink text](images/Key.jpg)
-![Hyperlink text](images/Prop.jpg)
+<img width="300" alt="Key CAD" src="https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/b49bd45f-f3af-417e-a997-9bb1ad8593e4">
 
 ### Reflection
 Like the last one, this assignment used mostly tools that I already have used before, but its good to have practice with those. Offset is used to pattern features like lines and circles, but make them bigger or smaller than the original. H is the shorct for horizontal, and v is vertical. The only problem I had on this is that I accidentally offset the key 0.8 mm and not the #print_gap distance of 0.4mm, but I eventually figured this out after checking the mass. This also works with creating a mate connector within a part rather than an assembly, which I havn't worked with much before, but it was pretty similar to doing it in an assembly so I was able to complete it relatively easily.
@@ -550,17 +548,16 @@ Like the last one, this assignment used mostly tools that I already have used be
 ## 4.3 Assembling the Launcher
 
 ### Assignment Description
-
-The purpose of this assignment is to refresh and relearn our skills in Onshape. The task is to create and design a ring and a spinner for a helicopter toy called a "Pull Copter." In this assignment, I was Student A and Shrey Panicker [@shrey45](https://github.com/shrey45) was Student B. I created the Ring, the Top, and the Key, while Shrey created the Spinner and the Prop.
+The task was to assemble and mate the pieces previously made into a complete pull copter.
 
 ### Part Link 
-[Link to the Assembly](https://cvilleschools.onshape.com/documents/8616b8a375e597ac84230d17/w/24a18f8c93de24401fba89ea/e/5d6f1ec0c09f80c20c19635d). 
+[Onshape Link](https://cvilleschools.onshape.com/documents/ba8472dcf4c5b8a5aa8cdf15/w/95fc89eb58180a50ec8e6108/e/1cb2083397180410db65082c?renderMode=0&uiState=6478ce94e5fcbd3ced9ffe7a)
 
 ### Part Image
-
+<img width="300" alt="Assembly CAD" src="https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/6d6067ce-0c74-4ee3-9b66-1776f4f746c3">
 
 ### Reflection
-
+This part of the assignment worked a lot with assemblies and mates, as opposed to the earlier assignments being focused on part studios. We used a few different types of mates that I was familiar with, such as revolute, which lets a part spin in place, slider, which fixes a part but allows it to slide along the z axis, and fastened, which completely fastens an object, not allowing it to move at all. A rack and pinion relation can be used between a slider and revolute mate to make them move together, simulating gears meshing. Limits can be used to limit the amount of moving a mate allows, and offsets moves the limit point from the original connector. I have also never used section view before, and it is very useful in viewing internal working of parts that may be difficult to see from the outside.
 
 ---
 
