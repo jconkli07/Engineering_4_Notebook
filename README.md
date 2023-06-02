@@ -216,7 +216,26 @@ https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/74679238-c10
 <img width="300" alt="CA1 Wiring" src="https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/ea8d6033-d2ba-4b53-a025-b839cc1de6ec">
 
 ### Code
+<details>
+<summary>Code</summary>
 
+```python
+import time
+import board
+import adafruit_mpu6050
+import busio
+
+
+sda_pin=board.GP10
+scl_pin=board.GP11
+i2c = busio.I2C(scl_pin, sda_pin)
+mpu = adafruit_mpu6050.MPU6050(i2c) #Sets up accelerometer
+
+while True:
+    print(mpu.acceleration) #Prints the x, y, and z acceleration values every half second
+    time.sleep(0.5)
+```
+</details>
 
 ### Reflection
 This assignment wasn't too difficult for me as I have wired accelerometers before this year and generally already understood how to code them. The acceleration values are stored in a 3 value array, with the first being x, second y, and third z.
