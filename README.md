@@ -8,15 +8,9 @@
 * [Launch Pad 3](#Launch-Pad-3)
 * [Launch Pad 4](#Launch-Pad-4)
 * [Crash Avoidance 1](#Crash-Avoidance-1)
-* [Crash Avoidance 2](#Crash-Avoidance-2)
-* [Crash Avoidance 3](#Crash-Avoidance-3)
 * [Landing Area 1](#Landing-Area-1)
-* [Landing Area 2](#Landing-Area-2)
 * [Morse Code 1](#Morse-Code-1)
 * [Morse Code 2](#Morse-Code-2)
-* [FEA Part 1-Beam Design](#FEA-Part-1-Beam-Design)
-* [FEA Part 2-Simscale Workflow](#FEA-Part-2-Simscale-Workflow)
-* [FEA Part 3-Iterative Design](#FEA-Part-3-Iterative-Design)
 * [4.1 Ring and Spinner](#41-Ring-and-Spinner)
 * [4.2 Key and Prop](#42-Key-and-Prop)
 * [4.3 Assembling the Launcher](#43-Assembling-the-Launcher)
@@ -154,7 +148,7 @@ This assignment was easier for me than the previous assignment, as I already had
 Once again this builds off the previous assignment, using the same structure except at launch a servo is rotated 180 degrees to represent the launch tower swinging away.
 
 ### Evidence 
-https://user-images.githubusercontent.com/63983735/198157804-bf16c9f3-f43b-47c4-bb21-4fcf63d7ba15.mov
+
 
 ### Wiring
 <img width="300" alt="LP4 Wiring" src="https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/95efed5b-1c67-4311-9886-bcc253912c48">
@@ -242,45 +236,6 @@ This assignment wasn't too difficult for me as I have wired accelerometers befor
 
 ---
 
-## Crash Avoidance 2
-
-### Assignment Description
-
-The objective of this assigment is to add on to Crash Avoidance 1 and make an LED turn on when it turns past 90 degrees in any direction. We also need to power this by using a LiPo battery instead of the computer.
-
-### Evidence 
-https://user-images.githubusercontent.com/63983735/198158030-ad1dd5ff-8b01-41d7-bebb-5063d7477d45.mov
-
-### Wiring
-![Crash 3](images/Crash_3_Wire.jpeg)
-
-### Code
-[This is my code](https://github.com/qragsda80/Engineering_4_Notebook/blob/main/raspberry-pi/CA2.py) 
-
-### Reflection
-This assignment was pretty simple. We added an if functions that said that if the value is less than or greater than 9 (which is around 90 degree), turn the LED on. This means I could turn the accelerometer in any direction on any axis and the LED would turn on if it gets close to 90 degrees. 
-
----
-
-## Crash Avoidance 3
-
-### Assignment Description
-Wire an OLED screen that prints the angular velocity values. Keep the other parts of the assignment like the LiPo battery and the LED turning on when turned past 90 degrees in any direction.
-
-### Evidence 
-![Crash 3](images/Crash_3.gif)
-
-### Wiring
-![Crash 3](images/Crash_3_Wire.jpeg)
-
-### Code
-[This is my code](https://github.com/qragsda80/Engineering_4_Notebook/blob/main/raspberry-pi/CA3.py)
-
-### Reflection
-One challenging part of this assignment was learning how to make a splash function run over and over again and not just text on top of eachother. Have ( splash = displayio.Group()) before the code to print on the OLED screen in your while True: loop. Once You also had to change the code from acceleration to angular velocity, but that wasn't hard.
-
----
-
 ## Landing Area 1
 
 ### Assignment Description
@@ -320,25 +275,6 @@ while True:     #Prompts the user again if it was not sucessful the first time
 
 ### Reflection
 This assignment was relatively difficult as it used a few new things in the code. The first one is taking the two inputs seperated by commas, which I can do with the .split(",") command. I also used Quinn's formula for calculating the area. I have used try/except in java before but not in python, but it is very useful in this case. It will attempt to run a block of code, and if that fails it will run the section under except.
-
----
-
-## Landing Area 2
-
-### Assignment Description
-Building on the last assignment, use an OLED screen to print everything. Also, you have to graph the triangle on the OLED screen.
-
-### Evidence 
-https://user-images.githubusercontent.com/63983735/198158356-7bf65323-b295-4371-82c7-9e00e29244bc.mov
-
-### Wiring
-![Landing 2 Wire](images/Landing_2_Wire.jpeg)
-
-### Code
-[This is my code](https://github.com/qragsda80/Engineering_4_Notebook/blob/main/raspberry-pi/LA2.py)
-
-### Reflection
-This assignment was a lot simpler because of how I did the first assignment. I wired the OLED screen up and created axis lines for the graph. You had figure out how to make the graph correctly. I added 64 to the x-values and 32 to the y-values to make sure the points were in the right place. The 0,0 is in the corner of the OLED screen instead of the middle, so we had to change that. There was a circle function that I put on the origin and the triangle function which I used and put in the coordinate points.
 
 ---
 
@@ -462,54 +398,6 @@ if not userMessage=="-q":   #Run program if quit message isn't entered
 
 ### Reflection
 This added a good bit of complexity over the earlier assignment as now I actually had to code in specific behaviors for each specific symbol. However, the coding methods were realtively simple and all stuff I have used before. The hardest part was figuring how to do the break between dots/dashes in the same letter effeciently, and I did this by adding a 1/4 second pause to all symbols, and reducing the wait times for the / and space by 1/4 each so they are not effected.
-
----
-
-## FEA Part 1-Beam Design
-
-### Assignment Description
-This assignment is a challenge to see what team can create a beam that can hold the most weight while staying within the constraints listed. The constraints are the following: the beam must be 180mm long, the beam cannot be more than 13g, and vertical angles must be >=45 degrees. The will fail if the beam breaks or the beam bends more than 35mm down.
-
-### Part Link 
-[Link to the Beam](https://cvilleschools.onshape.com/documents/34f9b9f6b9a6d5d97f68f198/w/f04197a87a1dec7558ea7a46/e/e540280db2672cb2008c8b17?renderMode=0&uiState=641326126afe3e7e82b82a00).
-
-### Part Image
-![Hyperlink text](images/FEA1.jpg)
-
-### Reflection
-For this beam, we made walls to try to reduce the amount of displacement going down when the weight is attached. This worked pretty well, but it still reached the displacement down 35mm before it broke. When it did break, it broke at the base of the beam. This means that in the next design, we need to add material to the walls and to the base of our beam.
-
----
-
-## FEA Part 2-Simscale Workflow
-
-### Assignment Description
-This assignment is a challenge to see what team can create a beam that can hold the most weight while staying within the constraints listed. The constraints are the following: the beam must be 180mm long, the beam cannot be more than 13g, and vertical angles must be >=45 degrees. The will fail if the beam breaks or the beam bends more than 35mm down.
-
-### Part Link 
-[Link to the Beam](https://cvilleschools.onshape.com/documents/34f9b9f6b9a6d5d97f68f198/w/f04197a87a1dec7558ea7a46/e/e540280db2672cb2008c8b17?renderMode=0&uiState=641326126afe3e7e82b82a00).
-
-### Part Image
-![Hyperlink text](images/FEA2.jpg)
-
-### Reflection
-When we used the Simscale, we can see that there is a lot of stress at the base of the beam. We used fillets at the base to try to add material to the point where it breaks. We took away as much material as we could from the end to reduce stress and weight and added it to the base with a draft on the walls.
-
----
-
-## FEA Part 3-Iterative Design
-
-### Assignment Description
-This assignment is a challenge to see what team can create a beam that can hold the most weight while staying within the constraints listed. The constraints are the following: the beam must be 180mm long, the beam cannot be more than 13g, and vertical angles must be >=45 degrees. The will fail if the beam breaks or the beam bends more than 35mm down.
-
-### Part Link 
-[Link to the Beam](https://cvilleschools.onshape.com/documents/34f9b9f6b9a6d5d97f68f198/w/f04197a87a1dec7558ea7a46/e/e540280db2672cb2008c8b17?renderMode=0&uiState=641326126afe3e7e82b82a00). 
-
-### Part Image
-![Hyperlink text](images/FEA3R.jpg)
-
-### Reflection
-For the final beam design, we cut out triangular holes and used more fillets to reduce weight. In the redesign, we mostly focused on reducing weight on the end and adding material. We made the walls taller and thinner. It held 2.27kg before it bent past 35mm. We finished first place in our class for this assignment, so I think that it was pretty successful.
 
 ---
 
