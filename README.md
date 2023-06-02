@@ -175,7 +175,7 @@ red = digitalio.DigitalInOut(board.GP15)
 red.direction = digitalio.Direction.OUTPUT
 green = digitalio.DigitalInOut(board.GP16)
 green.direction = digitalio.Direction.OUTPUT
-button = digitalio.DigitalInOut(board.GP11)
+button = digitalio.DigitalInOut(board.GP2)
 button.direction = digitalio.Direction.INPUT
 button.pull = digitalio.Pull.UP
 pwm_servo = pwmio.PWMOut(board.GP6, duty_cycle=2 ** 15, frequency=50)
@@ -183,7 +183,7 @@ launchTower = servo.Servo(pwm_servo, min_pulse=500, max_pulse=2500)
 
 launchTower.angle=0     #Sets the servo angle to 0 to start
 
-while not button.value: #Waits until button.value=True, which is when the button is pressed
+while button.value: #Waits until button.value=True, which is when the button is pressed
     time.sleep(0.1)
 
 for x in range(10,0,-1):        #Loops 10 times, with x going from 10 and ending at 1
