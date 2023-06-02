@@ -345,7 +345,7 @@ This assignment was a lot simpler because of how I did the first assignment. I w
 ## Morse Code 1
 
 ### Assignment Description
-The objective of this assignment is to translate a few words into morse code. The code asks you for the word(s). You type it in, and the morse code is returned to you. There is a bigger amount of space in between letters and slashes in between different words.
+The assignment asks for the code to be able to accept user input, and translate and then output the appropriate morse code.
 
 ### Evidence 
 https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/b0260fff-20e4-4c21-be5e-10e7212c36e7
@@ -389,7 +389,7 @@ if not userMessage=="-q":   #Run program if quit message isn't entered
 </details>
 
 ### Reflection
- We used libraries for the first time in this assignment. It wwas nice that all of the morse code language was already done for us and we would just pull it from that. One part that I struggled on was figuring out how to space out the words in with the spaces and slashes, but I firgured out I had to count a space as a character. I said that "if letter == " "", you put a slash and a space at the end of it. If there is no space, you add a space on the end of the morse code letter by saying "final = final + MORSE_CODE[letter] + ' '"
+This was the first time I have used dictionaries, and it was very useful for this assignment. A dictionary is used to store a dataset and its corresponding values, making it easy to find one from the other. Other than that the assignment used things I've used before such as if statements and for loops, as well as editing and checking equality of strings.
 
 ---
 
