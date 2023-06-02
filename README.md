@@ -335,7 +335,7 @@ This was the first time I have used dictionaries, and it was very useful for thi
 This adds on to the previous assignment by making an LED blink out the actual morse code in addition to writing it. I have to code the LED to blink for the specified number of time for each symbol.
 
 ### Evidence 
-https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/d7a0482d-c98a-49c1-a389-b3333a846776
+https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/003ee118-7bd8-48f4-b468-86b59bc18e8f
 
 ### Wiring
 <img width="300" alt="MC2 Wiring" src="https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/ade091f4-c83d-463d-9a3f-033968a4676a">
