@@ -148,7 +148,7 @@ This assignment was easier for me than the previous assignment, as I already had
 Once again this builds off the previous assignment, using the same structure except at launch a servo is rotated 180 degrees to represent the launch tower swinging away.
 
 ### Evidence 
-
+https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/b61ba0b8-19b4-48e2-b526-7168cfb77182
 
 ### Wiring
 <img width="300" alt="LP4 Wiring" src="https://github.com/jconkli07/Engineering_4_Notebook/assets/71349609/95efed5b-1c67-4311-9886-bcc253912c48">
